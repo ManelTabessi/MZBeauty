@@ -9,35 +9,25 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnfrag1;
-    Button btnfrag2;
+
     Button btnfrag3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        btnfrag1 = findViewById(R.id.btnfrag1);
-        btnfrag1.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
-                                            openAccueilActivity();
-                                        }
-                                    });
-                btnfrag2 = findViewById(R.id.btnfrag2);
-        btnfrag2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCategoryActivity();
-            }
-        });
-        btnfrag3 = findViewById(R.id.btnfrag3);
+               btnfrag3 = findViewById(R.id.btnfrag3);
         btnfrag3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openCategoryActivity();
+                openLoginActivity();
             }
         });
+    }
+
+    private void openLoginActivity() {
+        Intent intent = new Intent(this,Login.class);
+        startActivity(intent);
     }
 
     private void openProduitActivity()
@@ -55,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void openCompteActivity() {
-        Intent intent = new Intent(this,CompteActivity.class);
+        Intent intent = new Intent(this,Login.class);
         startActivity(intent);
     }
 

@@ -8,9 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class CategoryActivity extends AppCompatActivity {
-    Button btnfrag1;
-    Button btnfrag2;
-    Button btnfrag3;
+
     Button soins;
     Button Parfums;
     Button Maquillage;
@@ -19,27 +17,7 @@ public class CategoryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        btnfrag1 = findViewById(R.id.btnfrag1);
-        btnfrag1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openAccueilActivity();
-            }
-        });
-        btnfrag2 = findViewById(R.id.btnfrag2);
-        btnfrag2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openProduitActivity();
-            }
-        });
-        btnfrag3 = findViewById(R.id.btnfrag3);
-        btnfrag3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openCategoryActivity();
-            }
-        });
+
         soins = findViewById(R.id.soins);
         soins.setOnClickListener( new View.OnClickListener(){
             @Override
@@ -50,8 +28,32 @@ public class CategoryActivity extends AppCompatActivity {
         });
 
        Parfums = findViewById(R.id.Parfums);
+        Parfums.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openParfumsActivity();
+            }
+
+        });
 
         Maquillage = findViewById(R.id.Maquillage);
+        Maquillage.setOnClickListener( new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                openMaquillageActivity();
+            }
+
+        });
+    }
+
+    private void openParfumsActivity() {
+        Intent intent = new Intent(this,ParfumsActivity.class);
+        startActivity(intent);
+    }
+
+    private void openMaquillageActivity() {
+        Intent intent = new Intent(this,MaquillageActivity.class);
+        startActivity(intent);
     }
 
     private void openAccueilActivity() {

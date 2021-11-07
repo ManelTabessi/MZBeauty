@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MZBeauty">
         <activity
+            android:name=".FavorisActivity"
+            android:exported="true" />
+        <activity
             android:name=".CategoryActivity"
             android:exported="true" />
         <activity
@@ -21,6 +24,12 @@
             android:name=".ProduitActivity"
             android:exported="true" />
         <activity
+            android:name=".MaquillageActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ParfumsActivity"
+            android:exported="true" />
+        <activity
             android:name=".Parse_item"
             android:exported="true" />
         <activity
@@ -28,6 +37,15 @@
             android:exported="true" />
         <activity
             android:name=".CompteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Login"
+            android:exported="true" />
+        <activity
+            android:name=".LoginMainPage"
+            android:exported="true" />
+        <activity
+            android:name=".Register"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
